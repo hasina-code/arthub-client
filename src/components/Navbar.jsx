@@ -58,9 +58,9 @@ const Navbar = () => {
           {/* Search Bar (Desktop) */}
           <div className="hidden md:block relative w-full max-w-xs mx-6">
             <input 
-              // type="text" 
-              // placeholder="Search artworks..." 
-              // className="w-full bg-transparent border border-pink-500/50 rounded-full py-2 px-5 text-sm focus:outline-none focus:border-pink-500 transition-all"
+              type="text" 
+              placeholder="Search artworks..." 
+              className="w-full bg-transparent border border-pink-500/50 rounded-full py-2 px-5 text-sm focus:outline-none focus:border-pink-500 transition-all"
             />
             <Search className="absolute right-4 top-2.5 w-4 h-4 text-gray-400" />
           </div>
