@@ -20,7 +20,7 @@ export default function SidebarContent({ navItems, onNavigate }) {
       {/* MENU */}
       <div className="flex flex-col gap-2">
         {navItems.map((item) => {
-          // const Icon = iconMap[item.icon];
+          const Icon = iconMap[item.icon];
 
           return (
             <Link

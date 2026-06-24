@@ -24,7 +24,8 @@ export default function AddArtworkModal() {
       createdAt: new Date(),
     };
 
-   
+    const result = await addArtwork(artwork);
+    console.log(result);
   };
 
   return (

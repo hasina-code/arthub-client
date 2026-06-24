@@ -114,7 +114,7 @@ export default function SignInPage() {
             href="/signup"
             className="text-pink-500 hover:underline"
           >
-            Registe
+            Register
           </a>
         </p>
       </Surface>

@@ -9,9 +9,9 @@ export async function proxy(request) {
 
 console.log(session)
 
-   // if(!session){
-   //  return NextResponse.redirect(new URL('/signin', request.url))
-   // }
+   if(!session){
+    return NextResponse.redirect(new URL('/signin', request.url))
+   }
 
 }
 

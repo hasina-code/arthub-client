@@ -44,8 +44,8 @@ export async function POST(req) {
 
    
     return NextResponse.json({ 
-      // sessionId: session.id,
-      // url: session.url 
+      sessionId: session.id,
+      url: session.url 
     });
     
   } catch (err) {

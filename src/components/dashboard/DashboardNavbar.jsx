@@ -6,7 +6,7 @@ import { Bell, Search } from "lucide-react";
 
 export default function DashboardNavbar() {
   const { data: session } = authClient.useSession();
-  
+  const user = session?.user;
 
   return (
     <div className="h-16 border-b border-white/10 b flex items-center justify-between px-6">

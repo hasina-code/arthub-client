@@ -113,7 +113,7 @@ export default function SubscriptionPage() {
                     plan.popular ? "bg-pink-600 text-white" : "bg-gray-700 text-white"
                   }`}
                 >
-                  Upgrade
+                  Upgrade Now
                 </Button>
               )}
             </div>

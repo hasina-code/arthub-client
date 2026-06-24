@@ -147,7 +147,9 @@ export default function SignUpPage() {
 
                 <Select.Popover>
                   <ListBox>
-                    <ListBox.Item id="buyer" textValue="buyer">
+                    <ListBox.Item 
+                    
+                    id="buyer" textValue="buyer">
                       Buyer
                       <ListBox.ItemIndicator />
                     </ListBox.Item>
@@ -194,7 +196,7 @@ export default function SignUpPage() {
                 href="/signin"
                 className="text-pink-500 hover:underline"
               >
-                Sign 
+                Sign In
               </a>
             </p>
           </Fieldset>

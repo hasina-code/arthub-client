@@ -72,7 +72,7 @@ export default async function BuyerDashboard() {
               )}
             </ul>
             <button className="mt-6 w-full p-2 text-sm text-gray-400 hover:text-white border border-gray-700 rounded-lg">
-              View All
+              View All Transactions
             </button>
           </div>
         </div>

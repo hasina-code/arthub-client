@@ -141,8 +141,8 @@ export default function Banner() {
       </button>
 
       <button
-        onClick={nextSlide}
-        className="absolute right-6 top-1/2 -translate-y-1/2 z-30 p-3 rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-md text-white"
+        // onClick={nextSlide}
+        // className="absolute right-6 top-1/2 -translate-y-1/2 z-30 p-3 rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-md text-white"
       >
         <ChevronRight size={28} />
       </button>
@@ -151,10 +151,10 @@ export default function Banner() {
       <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2 z-30">
         {slides.map((_, i) => (
           <button
-            // key={i}
-            // onClick={() => setIndex(i)}
-            // className={`w-2.5 h-2.5 rounded-full transition ${
-            //   i === index ? "bg-white w-6" : "bg-white/40"
+            key={i}
+            onClick={() => setIndex(i)}
+            className={`w-2.5 h-2.5 rounded-full transition ${
+              i === index ? "bg-white w-6" : "bg-white/40"
             }`}
           />
         ))}

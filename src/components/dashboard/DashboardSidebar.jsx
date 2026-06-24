@@ -38,7 +38,7 @@ export default async function DashboardSidebar() {
   return (
     <>
       {/* DESKTOP */}
-      {/* <aside className="hidden md:block w-[260px] h-screen border-r border-gray-800"> */}
+      <aside className="hidden md:block w-[260px] h-screen border-r border-gray-800">
         <SidebarContent navItems={navItems} />
       </aside>
 

@@ -43,7 +43,7 @@ export default async function Success({ searchParams }) {
 
           <Link href="/dashboard/buyer" className="block">
             <button className="w-full bg-pink-600 hover:bg-pink-700 text-white font-bold py-3 px-4 sm:px-6 rounded-xl transition-all">
-              Go to Dashboar
+              Go to Dashboard
             </button>
           </Link>
         </div>

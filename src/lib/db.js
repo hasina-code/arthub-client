@@ -25,8 +25,8 @@ if (process.env.NODE_ENV === "development") {
 
 
 export async function getDb() {
-  // const client = await dbPromise;
-  // return client.db("ArtHub"); 
+  const client = await dbPromise;
+  return client.db("ArtHub"); 
 }
 
 
