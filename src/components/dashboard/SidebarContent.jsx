@@ -27,7 +27,7 @@ export default function SidebarContent({ navItems, onNavigate }) {
               key={item.label}
               href={item.link}
               onClick={onNavigate}
-              className={`flex items-center gap-4 rounded-xl px-4 py-3 text-sm font-medium transition-all
+              // className={`flex items-center gap-4 rounded-xl px-4 py-3 text-sm font-medium transition-all
                 ${
                   pathname === item.link
                     ? "bg-pink-600 text-white"
