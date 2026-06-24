@@ -62,9 +62,9 @@ export default function SignInPage() {
             <TextField isRequired name="email" type="email">
               <Label className="text-white">Email</Label>
               <Input
-                // placeholder="john@example.com"
-                // variant="secondary"
-                // className="w-full p-3 mb-4 rounded-xl bg-slate-950 text-white border border-slate-700"
+                placeholder="john@example.com"
+                variant="secondary"
+                className="w-full p-3 mb-4 rounded-xl bg-slate-950 text-white border border-slate-700"
               />
               <FieldError />
             </TextField>
