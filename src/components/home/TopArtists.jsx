@@ -99,7 +99,7 @@ export default function TopArtists() {
                   repeat: Infinity,
                   ease: "easeInOut",
                 }}
-                className="relative h-28 w-28 overflow-hidden rounded-full border-4 border-[#0b0e17] shadow-2xl"
+                // className="relative h-28 w-28 overflow-hidden rounded-full border-4 border-[#0b0e17] shadow-2xl"
               >
                 <Image
                   src={artist.avatar}

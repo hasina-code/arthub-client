@@ -141,8 +141,8 @@ export default function Banner() {
       </button>
 
       <button
-        // onClick={nextSlide}
-        // className="absolute right-6 top-1/2 -translate-y-1/2 z-30 p-3 rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-md text-white"
+        onClick={nextSlide}
+        className="absolute right-6 top-1/2 -translate-y-1/2 z-30 p-3 rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-md text-white"
       >
         <ChevronRight size={28} />
       </button>
