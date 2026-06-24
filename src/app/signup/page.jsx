@@ -145,21 +145,26 @@ export default function SignUpPage() {
                   <Select.Indicator />
                 </Select.Trigger>
 
-                <Select.Popover>
-                  <ListBox>
-                    <ListBox.Item 
-                    
-                    id="buyer" textValue="buyer">
-                      Buyer
-                      <ListBox.ItemIndicator />
-                    </ListBox.Item>
+                <Select.Popover className="bg-[#0f111a] border border-slate-700 rounded-xl">  <ListBox>
+                  <ListBox.Item
+                 id="buyer"
+                 textValue="buyer"
+                 className="text-white hover:bg-slate-800 rounded-lg"
+                >
+                Buyer
+               <ListBox.ItemIndicator />
+            </ListBox.Item>
 
-                    <ListBox.Item id="artist" textValue="artist">
-                      Artist
-                      <ListBox.ItemIndicator />
-                    </ListBox.Item>
-                  </ListBox>
-                </Select.Popover>
+            <ListBox.Item
+                 id="artist"
+                textValue="artist"
+               className="text-white hover:bg-slate-800 rounded-lg"
+               >
+              Artist
+            <ListBox.ItemIndicator />
+           </ListBox.Item>
+           </ListBox>
+          </Select.Popover>
               </Select>
             </Fieldset.Group>
 

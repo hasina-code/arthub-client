@@ -29,7 +29,7 @@ export default async function DashboardSidebar() {
       { icon: "LayoutDashboard", label: "Admin Overview", link: "/dashboard/admin" },
       { icon: "User2", label: "Manage Users", link: "/dashboard/admin/users" },
       { icon: "TbAsset", label: "All Artworks", link: "/dashboard/admin/artworks" },
-      { icon: "BiMoney", label: "Transactions", link: "/dashboard/admin/transactions" },
+      // { icon: "BiMoney", label: "Transactions", link: "/dashboard/admin/transactions" },
     ],
   };
 

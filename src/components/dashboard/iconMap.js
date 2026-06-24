@@ -12,7 +12,7 @@ export const iconMap = {
   ChartArea,
   LayoutDashboard,
   User2,
-  BiMoney,
-  TbAsset,
-  MdPalette,
+  // BiMoney,
+  // TbAsset,
+  // MdPalette,
 };
