@@ -22,7 +22,7 @@ export const addArtwork = async (artwork) => {
       "Content-Type": "application/json",
       Authorization: `Bearer ${token}`,
     },
-    body: JSON.stringify(artwork),
+    // body: JSON.stringify(artwork),
   });
 
   const data = await res.json();

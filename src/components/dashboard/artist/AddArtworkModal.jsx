@@ -214,8 +214,8 @@ const onSubmit = async (e) => {
                   </Button>
 
                   <Button
-                    type="submit"
-                    className="rounded-2xl bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-500 px-8 font-bold text-white shadow-[0_0_25px_rgba(236,72,153,0.4)] transition-all hover:scale-105"
+                    // type="submit"
+                    // className="rounded-2xl bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-500 px-8 font-bold text-white shadow-[0_0_25px_rgba(236,72,153,0.4)] transition-all hover:scale-105"
                   >
                     Submit 
                   </Button>
