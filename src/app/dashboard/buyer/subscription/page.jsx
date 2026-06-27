@@ -54,7 +54,7 @@ export default function SubscriptionPage() {
         window.location.assign(data.url);
       } else if (data.sessionId) {
         const stripe = await stripePromise;
-        await stripe?.redirectToCheckout({ sessionId: data.sessionId });
+        // await stripe?.redirectToCheckout({ sessionId: data.sessionId });
       }
     } catch (error) {
       console.error("Subscription failed:", error);

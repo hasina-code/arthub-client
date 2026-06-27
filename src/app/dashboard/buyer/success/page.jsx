@@ -30,9 +30,9 @@ export default async function Success({ searchParams }) {
       
         <div className="max-w-lg w-full bg-[#0f131f] border border-gray-800 p-6 sm:p-10 rounded-3xl shadow-2xl text-center">
           
-          {/* <div className="mx-auto flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-green-500/10 mb-6">
+          <div className="mx-auto flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-green-500/10 mb-6">
             <CheckCircle className="w-8 h-8 sm:w-10 sm:h-10 text-green-500" />
-          </div> */}
+          </div>
 
           <h1 className="text-2xl sm:text-3xl font-bold text-white">Payment Successful!</h1>
           
