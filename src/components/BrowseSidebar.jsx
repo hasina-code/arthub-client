@@ -114,7 +114,7 @@ export default function BrowseSidebar({
           <select
             value={availability}
             onChange={(e) => setAvailability(e.target.value)}
-            className="w-full bg-[#0D183B] border border-slate-800 rounded-2xl p-4 text-white outline-none focus:border-pink-500 transition"
+            // className="w-full bg-[#0D183B] border border-slate-800 rounded-2xl p-4 text-white outline-none focus:border-pink-500 transition"
           >
             <option value="">All Items</option>
             <option value="available">Available</option>
