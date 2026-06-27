@@ -4,4 +4,4 @@ export const authClient = createAuthClient({
   baseURL: process.env.NEXT_PUBLIC_BASE_URL,
   plugins: [jwtClient()]
 });
-export const { signIn, signUp, signOut, useSession } = authClient;
+export const { signIn, signUp, signOut, useSession,changePassword, } = authClient;

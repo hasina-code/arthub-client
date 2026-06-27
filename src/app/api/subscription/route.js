@@ -49,7 +49,7 @@ export async function POST(req) {
     });
     
   } catch (err) {
-    console.error("Stripe Error:", err); // 
+    console.error("Stripe Error:", err); 
     return NextResponse.json(
       { error: err.message },
       { status: 500 }

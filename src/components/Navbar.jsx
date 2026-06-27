@@ -76,7 +76,7 @@ const Navbar = () => {
             <div className="hidden items-center gap-4 md:flex">
               <Link href="/signin" className="text-sm font-medium hover:text-pink-400">Sign In</Link>
               <Link href="/signup">
-                <Button className="bg-gradient-to-r from-pink-600 to-purple-600 font-bold">Register</Button>
+                <Button className="bg-gradient-to-r from-pink-600 to-purple-600 font-bold">Sign Up</Button>
               </Link>
             </div>
           )}
@@ -131,7 +131,7 @@ const Navbar = () => {
               {!user && (
                 <>
                   <li><Link href="/signin">Sign In</Link></li>
-                  <li><Link href="/signup" className="text-pink-500 font-bold">Register</Link></li>
+                  <li><Link href="/signup" className="text-pink-500 font-bold">Sign Up</Link></li>
                 </>
               )}
             </ul>

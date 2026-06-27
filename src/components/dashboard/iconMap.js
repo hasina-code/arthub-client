@@ -2,6 +2,7 @@ import {
   ChartArea,
   LayoutDashboard,
   User2,
+  Users,
 } from "lucide-react";
 
 import { BiMoney } from "react-icons/bi";
@@ -12,6 +13,7 @@ export const iconMap = {
   ChartArea,
   LayoutDashboard,
   User2,
+  Users,
   BiMoney,
   TbAsset,
   MdPalette,
