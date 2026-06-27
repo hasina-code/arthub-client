@@ -11,6 +11,6 @@ export const subscription = async (data) => {
     body: JSON.stringify(data),
   });
 
-  // const resData = await res.json();
-  // return resData;
+  const resData = await res.json();
+  return resData;
 };
