@@ -188,7 +188,7 @@ const onSubmit = async (e) => {
       </p>
     )}
 
-    <input
+    {/* <input
       type="file"
       name="image"
       required
@@ -199,7 +199,7 @@ const onSubmit = async (e) => {
           setFileName(e.target.files[0].name);
         }
       }}
-    />
+    /> */}
   </label>
 </div>
 

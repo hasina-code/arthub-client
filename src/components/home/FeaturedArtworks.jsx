@@ -57,9 +57,9 @@ export default function FeaturedArtworks() {
               <h2 className="text-4xl md:text-5xl font-extrabold text-white tracking-tight text-center md:text-left">
                 Featured <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-400">Artworks</span>
               </h2>
-              {/* <p className="text-slate-400 text-lg text-center md:text-left max-w-xl">
+              <p className="text-slate-400 text-lg text-center md:text-left max-w-xl">
              Discover our hand-picked collection of unique masterpieces created by talented artists from around the world.
-             </p> */}
+             </p>
               <div className="w-24 h-1.5 mx-auto md:mx-0" />
             </div>
 
