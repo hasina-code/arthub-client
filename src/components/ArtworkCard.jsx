@@ -31,7 +31,7 @@ export default function ArtworkCard({ art }) {
 
      
         <div className="flex items-center justify-between border-t border-white/10 pt-4">
-          {/* <span className="text-lg font-bold">${art.price}</span> */}
+          <span className="text-lg font-bold">${art.price}</span>
           <span className="text-sm font-semibold text-white flex items-center gap-1 group-hover:gap-2 transition-all">
             <span className="text-pink-500">Details →</span>
           </span>
