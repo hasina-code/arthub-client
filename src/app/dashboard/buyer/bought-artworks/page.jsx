@@ -87,7 +87,7 @@ export default function BoughtArtworksPage() {
                   <div className="absolute inset-0 bg-gradient-to-t from-[#09122E] to-transparent opacity-60" />
                 </div>
                 
-                <div className="p-6">
+                {/* <div className="p-6">
                   <h3 className="text-2xl font-bold mb-1 truncate">{item.artworkTitle}</h3>
                   <p className="text-slate-400 text-sm mb-4">Artist: {item.artistName}</p>
                   
@@ -96,7 +96,7 @@ export default function BoughtArtworksPage() {
                     <span className="text-slate-500 text-xs bg-white/5 px-2 py-1 rounded">
                       {new Date(item.purchaseDate).toLocaleDateString()}
                     </span>
-                  </div>
+                  </div> */}
 
                   <Link
                     href={`/artworks/${item.artworkId}`}
