@@ -41,46 +41,45 @@ export default function FeaturedArtworks() {
 
   return (
     <section className="py-20 bg-[#050B23] relative overflow-hidden">
-      {/* Background Decor */}
+      
       <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-purple-900/20 rounded-full blur-[120px]" />
       
       <div className="max-w-7xl mx-auto px-4 relative z-10">
-        
-       
-<div className="flex flex-col mb-16 gap-6">
-  
- 
-  <div className="text-center w-full">
-    <span className="inline-block px-4 py-1 text-xs font-bold tracking-widest uppercase text-pink-400 bg-slate-900 border border-slate-800 rounded-full">
-      Featured Artworks
-    </span>
-  </div>
+        <div className="flex flex-col mb-12 gap-6">
+          <div className="text-center w-full">
+            <span className="inline-block px-4 py-1 text-xs font-bold tracking-widest uppercase text-pink-400 bg-slate-900 border border-slate-800 rounded-full">
+              Featured Artworks
+            </span>
+          </div>
 
-  <div className="flex flex-col md:flex-row md:justify-between md:items-end gap-6">
-    <div className="space-y-4 flex-1">
-      <h2 className="text-4xl md:text-5xl font-extrabold text-white tracking-tight text-center md:text-left">
-        Featured <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-400">Artworks</span>
-      </h2>
-   
-      <div className="w-24 h-1.5 bg-gradient-to-r  rounded-full mx-auto md:mx-0" />
-    </div>
+          <div className="flex flex-col md:flex-row md:justify-between md:items-end gap-6">
+            <div className="space-y-4 flex-1">
+              <h2 className="text-4xl md:text-5xl font-extrabold text-white tracking-tight text-center md:text-left">
+                Featured <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-400">Artworks</span>
+              </h2>
+              {/* <p className="text-slate-400 text-lg text-center md:text-left max-w-xl">
+             Discover our hand-picked collection of unique masterpieces created by talented artists from around the world.
+             </p> */}
+              <div className="w-24 h-1.5 mx-auto md:mx-0" />
+            </div>
 
-    <Link 
-      href="/artworks" 
-      className="hidden md:flex group items-center gap-2 text-white bg-white/5 hover:bg-white/10 px-8 py-3 rounded-full transition-all duration-300 font-medium border border-white/10 hover:border-pink-500/50 w-fit shrink-0"
-    >
-      View All Artworks 
-      <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
-    </Link>
-  </div>
-</div>
+            <Link 
+               href="/artworks" 
+               className="hidden md:flex group items-center gap-2 text-white bg-white/5 hover:bg-white/10 px-8 py-3 rounded-full transition-all duration-300 font-medium border border-white/10 hover:border-pink-500/50 w-fit shrink-0"
+            >
+              View All Artworks 
+              <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+            </Link>
+          </div>
+        </div>
 
         {/* Cards Grid */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {artworks.map((art) => (
-            <div
+            <Link
+              href={`/artworks/${art._id}`}
               key={art._id}
-              className="group bg-[#0B1437]/60 backdrop-blur-xl rounded-3xl overflow-hidden border border-white/10 hover:border-pink-500/50 transition-all duration-500 hover:shadow-2xl hover:shadow-pink-500/10"
+              className="group block bg-[#0B1437]/60 backdrop-blur-xl rounded-3xl overflow-hidden border border-white/10 hover:border-pink-500/50 transition-all duration-500 hover:shadow-2xl hover:shadow-pink-500/10"
             >
               {/* Image Section */}
               <div className="relative h-[280px] overflow-hidden">
@@ -127,7 +126,7 @@ export default function FeaturedArtworks() {
                   </div>
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>
