@@ -166,9 +166,9 @@ export default function ArtworkInfo({
       >
         <ShoppingCart />
 
-        {isOwner
+        {/* {isOwner
           ? "Your Artwork"
-          : "BUY NOW WITH STRIPE"}
+          : "BUY NOW WITH STRIPE"} */}
       </button>
 
       {isOwner && (

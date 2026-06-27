@@ -21,10 +21,10 @@ export default function ArtworkComments({
           Please login to comment.
         </div>
       ) : (
-        <textarea
-          className="w-full h-40 bg-[#0D183B] border border-slate-700 rounded-2xl p-5"
-          placeholder="Write review..."
-        />
+        // <textarea
+        //   className="w-full h-40 bg-[#0D183B] border border-slate-700 rounded-2xl p-5"
+        //   placeholder="Write review..."
+        // />
       )}
 
     </div>
