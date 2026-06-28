@@ -20,11 +20,11 @@ export default function ManageUsersPage() {
         headers: { Authorization: `Bearer ${token}` },
       });
       setUsers(res.data);
-    // } catch (error) {
-    //   console.error(error);
-    // } finally {
-    //   setLoading(false);
-    // }
+    } catch (error) {
+      console.error(error);
+    } finally {
+      setLoading(false);
+    }
   };
 
   useEffect(() => {
