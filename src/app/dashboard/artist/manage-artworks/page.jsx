@@ -122,12 +122,12 @@ export default function ManageArtworksPage() {
               {artworks.map((art) => (
                 <div key={art._id} className="bg-[#09122E] p-4 rounded-2xl border border-slate-800 flex gap-4 items-center">
                   <img src={art.image} className="w-20 h-20 rounded-xl object-cover" />
-{/*                   
+                  
                   <div className="flex-1">
                     <h3 className="font-bold text-lg">{art.title}</h3>
                     <p className="text-emerald-400">${art.price}</p>
                     <span className={`inline-block mt-1 px-2 py-0.5 rounded text-[10px] ${art.status === "sold" ? "bg-red-500/10 text-red-400" : "bg-green-500/10 text-green-400"}`}>{art.status}</span>
-                  </div> */}
+                  </div>
                   
                   <div className="flex flex-col gap-2">
                     <Link href={`/dashboard/artist/edit/${art._id}`} className="p-2 bg-slate-800 rounded-lg text-yellow-400">
