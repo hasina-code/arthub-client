@@ -41,15 +41,13 @@ export default function EditArtworkPage() {
     }
   };
 
-//  if (loading) {
-//   return (
-//     <div className="min-h-screen bg-[#050B23] flex justify-center items-center">
-//       <Loader2 className="w-10 h-10 animate-spin text-pink-500" />
-//     </div>
-//   );
-// }
-  
-  }
+  if (loading) {
+  return (
+    <div className="min-h-screen bg-[#050B23] flex justify-center items-center">
+      <Loader2 className="w-10 h-10 animate-spin text-pink-500" />
+    </div>
+  );
+}
 
   return (
     <section className="min-h-screen bg-[#050B23] text-white p-6">
