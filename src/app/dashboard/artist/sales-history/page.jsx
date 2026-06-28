@@ -56,7 +56,7 @@ export default function SalesHistoryPage() {
     <section className="min-h-screen p-6 text-white">
       <div className="mb-8">
         <h1 className="text-4xl font-bold">
-          Sales History
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-blue-400">Sales History</span>
         </h1>
 
         <p className="text-slate-400 mt-2">

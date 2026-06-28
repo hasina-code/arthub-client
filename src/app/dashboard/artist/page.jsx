@@ -104,7 +104,7 @@ export default function ArtistDashboardHomePage() {
 
         <div className="mb-10">
           <h1 className="text-4xl font-bold">
-            Artist Dashboard
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-blue-400">Artist Dashboard</span>
           </h1>
 
           <p className="text-slate-400 mt-2">

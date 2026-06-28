@@ -59,7 +59,7 @@ export default function ArtistProfilePage() {
       <div className="max-w-6xl mx-auto">
 
         <h1 className="text-4xl font-bold mb-8">
-          Profile Management
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-blue-400">Profile Management</span>
         </h1>
 
         <div className="grid lg:grid-cols-3 gap-8">

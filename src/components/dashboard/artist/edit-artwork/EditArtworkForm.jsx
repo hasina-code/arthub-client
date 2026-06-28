@@ -84,7 +84,7 @@ export default function EditArtworkForm({
     <div className="bg-[#09122E] border border-slate-800 rounded-3xl p-8">
 
       <h1 className="text-4xl font-bold mb-8">
-        Edit Artwork
+        <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-blue-400">Edit Artwork</span>
       </h1>
 
       <form

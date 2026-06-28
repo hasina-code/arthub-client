@@ -107,10 +107,10 @@ export default function ManageArtworksPage() {
                 Price
               </th>
 
-              {/* <th className="p-5 text-left">
+              <th className="p-5 text-left">
                 Action
               </th>
-            </tr> */}
+            </tr>
 
           </thead>
 

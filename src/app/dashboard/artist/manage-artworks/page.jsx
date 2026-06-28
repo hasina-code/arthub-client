@@ -71,7 +71,7 @@ export default function ManageArtworksPage() {
    
         <div className="flex flex-col md:flex-row md:justify-between md:items-end gap-4 mb-10">
           <div>
-            <h1 className="text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-pink-500 to-violet-500 bg-clip-text text-transparent leading-relaxed">
+            <h1 className="text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-pink-500 to-blue-400 bg-clip-text text-transparent leading-relaxed">
               Manage Artworks
             </h1>
             <p className="text-slate-400 mt-2">Manage your uploaded artworks</p>
