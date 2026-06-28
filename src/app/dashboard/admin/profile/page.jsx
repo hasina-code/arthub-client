@@ -22,8 +22,8 @@ export default function AdminProfilePage() {
   useEffect(() => {
     if (session?.user?.email) {
       fetchUser();
-  //   }
-  // }, [session]);
+    }
+  }, [session]);
 
   const fetchUser = async () => {
     try {
