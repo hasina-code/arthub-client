@@ -3,7 +3,9 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { authClient } from "@/lib/auth-client";
-;
+import OverviewCards from "@/components/dashboard/admin/OverviewCards";
+import { SalesChart } from "@/components/dashboard/admin/SalesChart";
+import { CategoryPieChart } from "@/components/dashboard/admin/CategoryPieChart";
 
 
 
@@ -61,7 +63,12 @@ return ( <section className="space-y-8 text-white"> <h1 className="text-4xl font
 Admin Overview </h1>
 
 
-  
+  <OverviewCards analytics={analytics} />
+
+  <div className="grid lg:grid-cols-2 gap-6">
+    <SalesChart data={salesData} />
+    <CategoryPieChart data={categoryData} />
+  </div>
 </section>
 
 
