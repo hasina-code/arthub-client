@@ -92,9 +92,9 @@ export default function ArtistDashboardHomePage() {
 
   if (isPending || loading) {
     return (
-      <div className="min-h-screen flex justify-center items-center bg-[#050B23]">
-        <Loader2 className="w-10 h-10 animate-spin text-pink-500" />
-      </div>
+      // <div className="min-h-screen flex justify-center items-center bg-[#050B23]">
+      //   <Loader2 className="w-10 h-10 animate-spin text-pink-500" />
+      // </div>
     );
   }
 

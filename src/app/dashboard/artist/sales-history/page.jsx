@@ -69,12 +69,12 @@ export default function SalesHistoryPage() {
         <table className="w-full text-left">
 
           <thead className="bg-[#0D183B]">
-            {/* <tr>
+            <tr>
               <th className="p-5">Artwork</th>
               <th className="p-5">Buyer</th>
               <th className="p-5">Date</th>
               <th className="p-5">Amount</th>
-            </tr> */}
+            </tr>
           </thead>
 
           <tbody>
