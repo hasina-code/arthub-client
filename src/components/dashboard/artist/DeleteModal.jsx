@@ -17,10 +17,10 @@ export default function DeleteModal({
           Delete Artwork
         </h2>
 
-        {/* <p className="text-slate-400 mb-8">
+        <p className="text-slate-400 mb-8">
           Are you sure you want to delete this artwork?
           This action cannot be undone.
-        </p> */}
+        </p>
 
         <div className="flex justify-end gap-4">
 
