@@ -24,8 +24,8 @@ fetchTransactions();
 const fetchTransactions = async () => {
 try {
 const token =
-// session?.session?.token ||
-// session?.token;
+session?.session?.token ||
+session?.token;
 
 
   const res = await axios.get(
