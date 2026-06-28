@@ -19,11 +19,11 @@ title: "Total Artists",
 value: analytics.totalArtists || 0,
 icon: Palette,
 },
-// {
-// title: "Artworks Sold",
-// value: analytics.soldArtworks || 0,
-// icon: ShoppingBag,
-// },
+{
+title: "Artworks Sold",
+value: analytics.soldArtworks || 0,
+icon: ShoppingBag,
+},
 {
 title: "Total Revenue",
 value: `$${analytics.totalRevenue || 0}`,
