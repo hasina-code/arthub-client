@@ -30,11 +30,11 @@ return (
             x2="0"
             y2="1"
           >
-            {/* <stop
+            <stop
               offset="5%"
               stopColor="#ec4899"
               stopOpacity={0.4}
-            /> */}
+            />
 
             <stop
               offset="95%"
