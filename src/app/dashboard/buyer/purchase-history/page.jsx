@@ -16,19 +16,19 @@ export default function PurchaseHistoryPage() {
     }
   }, [session]);
 
-  const fetchHistory = async () => {
-    try {
-      setLoading(true);
-      const res = await axios.get(
-        `${process.env.NEXT_PUBLIC_SERVER_URL}/purchase-history/${session.user.email}`
-      );
-      setHistory(res.data);
-    } catch (error) {
-      console.error(error);
-    } finally {
-      setLoading(false);
-    }
-  };
+  // const fetchHistory = async () => {
+  //   try {
+  //     setLoading(true);
+  //     const res = await axios.get(
+  //       `${process.env.NEXT_PUBLIC_SERVER_URL}/purchase-history/${session.user.email}`
+  //     );
+  //     setHistory(res.data);
+  //   } catch (error) {
+  //     console.error(error);
+  //   } finally {
+  //     setLoading(false);
+  //   }
+  // };
 
   if (loading || isPending) {
     return (
@@ -81,12 +81,12 @@ export default function PurchaseHistoryPage() {
                 </tr>
               ))
             ) : (
-              // <tr>
-              //   <td colSpan={4} className="py-16 text-center text-slate-500">
-              //     <Inbox className="w-12 h-12 mx-auto mb-3 opacity-50" />
-              //     No purchase history found.
-              //   </td>
-              // </tr>
+              <tr>
+                <td colSpan={4} className="py-16 text-center text-slate-500">
+                  <Inbox className="w-12 h-12 mx-auto mb-3 opacity-50" />
+                  No purchase history found.
+                </td>
+              </tr>
             )}
           </tbody>
         </table>

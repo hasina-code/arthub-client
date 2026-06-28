@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { iconMap } from "./iconMap";
 
+
 export default function SidebarContent({ navItems, onNavigate }) {
   const pathname = usePathname();
 
@@ -13,6 +14,7 @@ export default function SidebarContent({ navItems, onNavigate }) {
       {/* LOGO */}
       <div className="mb-8 px-3">
         <Link href="/" onClick={onNavigate} className="text-2xl font-bold">
+        
           ArtHub
         </Link>
       </div>

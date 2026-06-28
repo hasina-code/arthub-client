@@ -84,7 +84,10 @@ export default function ArtworkDetailsPage() {
 
         </div>
 
-        <ArtworkComments session={session} />
+        <ArtworkComments 
+        session={session}
+        artworkId={artwork._id}
+         />
 
       </div>
     </section>

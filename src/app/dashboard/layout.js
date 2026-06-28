@@ -28,10 +28,10 @@ export default async function DashboardLayout({ children }) {
       icon: "LayoutDashboard", label: "Overview", link: "/dashboard/admin",
     },
     {
-      icon: "Users", label: "Manage Users", link: "/dashboard/admin/users",
+      icon: "Users", label: "Manage Users", link: "/dashboard/admin/manage-users",
     },
     {
-      icon: "TbAsset", label: "Manage Artworks", link: "/dashboard/admin/artworks",
+      icon: "TbAsset", label: "Manage Artworks", link: "/dashboard/admin/manage-artworks",
     },
     {
       icon: "BiMoney",label: "Transactions",link: "/dashboard/admin/transactions",

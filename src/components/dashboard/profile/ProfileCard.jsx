@@ -25,9 +25,9 @@ export default function ProfileCard({
           {userData?.email}
         </p>
 
-        <span className="mt-4 bg-pink-600 px-5 py-2 rounded-full capitalize">
+        {/* <span className="mt-4 bg-pink-600 px-5 py-2 rounded-full capitalize">
           {userData?.role || "User"} Account
-        </span>
+        </span> */}
 
       </div>
 

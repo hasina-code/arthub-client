@@ -50,8 +50,8 @@ const Navbar = () => {
               </svg>
             </button>
             <Link href={'/'} className="flex items-center gap-2">
-              <MdPalette className="w-10 h-10 text-cyan-400" />
-              <span className="text-3xl font-bold bg-gradient-to-r from-pink-400 to-cyan-400 bg-clip-text text-transparent">ArtHub</span>
+              <MdPalette className="w-10 h-10 text-pink-400" />
+              <span className="text-3xl font-bold bg-gradient-to-r from-cyan-400 to-pink-400 bg-clip-text text-transparent">ArtHub</span>
             </Link>
           </div>
 

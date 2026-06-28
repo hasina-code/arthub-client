@@ -116,7 +116,7 @@ export default function Banner() {
             className="flex flex-col sm:flex-row gap-4 justify-center mt-10"
           >
             <button
-              onClick={() => router.push("/artworks")}
+              onClick={() => router.push("/browse")}
               className="px-8 py-4 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold hover:scale-105 transition"
             >
               Browse Artworks

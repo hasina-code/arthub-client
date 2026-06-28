@@ -152,7 +152,7 @@ export default function ArtistDashboardHomePage() {
             </h2>
           </div>
 
-          <div className="bg-[#09122E] rounded-3xl p-6 border border-slate-800">
+          {/* <div className="bg-[#09122E] rounded-3xl p-6 border border-slate-800">
             <DollarSign className="text-yellow-500 mb-4" size={34} />
 
             <h3 className="text-slate-400">
@@ -162,7 +162,7 @@ export default function ArtistDashboardHomePage() {
             <h2 className="text-4xl font-bold mt-2">
               ${stats.totalRevenue}
             </h2>
-          </div>
+          </div> */}
 
         </div>
 

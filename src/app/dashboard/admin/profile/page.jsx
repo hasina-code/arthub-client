@@ -9,7 +9,7 @@ import ProfileForms from "@/components/dashboard/profile/ProfileForms";
 
 
 
-export default function BuyerProfilePage() {
+export default function AdminProfilePage() {
   const { data: session, isPending } =
     authClient.useSession();
 
@@ -22,8 +22,8 @@ export default function BuyerProfilePage() {
   useEffect(() => {
     if (session?.user?.email) {
       fetchUser();
-    }
-  }, [session]);
+  //   }
+  // }, [session]);
 
   const fetchUser = async () => {
     try {
@@ -63,7 +63,7 @@ export default function BuyerProfilePage() {
             image={image}
           />
 
-          {/* <ProfileForms
+          <ProfileForms
             session={session}
             userData={userData}
             name={name}
@@ -71,7 +71,7 @@ export default function BuyerProfilePage() {
             image={image}
             setImage={setImage}
             fetchUser={fetchUser}
-          /> */}
+          />
 
         </div>
       </div>

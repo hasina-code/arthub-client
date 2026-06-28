@@ -14,13 +14,13 @@ export default function EditArtworkPage() {
 
   const [loading, setLoading] = useState(true);
 
-  const [artwork, setArtwork] = useState({
-    title: "",
-    description: "",
-    price: "",
-    category: "",
-    image: "",
-  });
+  // const [artwork, setArtwork] = useState({
+  //   title: "",
+  //   description: "",
+  //   price: "",
+  //   category: "",
+  //   image: "",
+  // });
 
   useEffect(() => {
     fetchArtwork();
