@@ -63,7 +63,7 @@ export default function BuyerProfilePage() {
             image={image}
           />
 
-          {/* <ProfileForms
+          <ProfileForms
             session={session}
             userData={userData}
             name={name}
@@ -71,7 +71,7 @@ export default function BuyerProfilePage() {
             image={image}
             setImage={setImage}
             fetchUser={fetchUser}
-          /> */}
+          />
 
         </div>
       </div>
