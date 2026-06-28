@@ -69,7 +69,7 @@ export default function ArtistProfilePage() {
             name={name}
             image={image}
           />
-{/* 
+
           <ProfileForms
             session={session}
             userData={userData}
@@ -78,7 +78,7 @@ export default function ArtistProfilePage() {
             image={image}
             setImage={setImage}
             fetchUser={fetchUser}
-          /> */}
+          />
 
         </div>
 
