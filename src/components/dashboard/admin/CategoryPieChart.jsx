@@ -30,13 +30,13 @@ return (
 
       <PieChart>
 
-        {/* <Pie
+        <Pie
           data={data}
           dataKey="value"
           nameKey="name"
           outerRadius={120}
           label
-        > */}
+        >
           {data.map((entry, index) => (
             <Cell
               key={index}
