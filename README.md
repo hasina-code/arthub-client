@@ -1,36 +1,85 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🎨 ArtHub - Client
 
-## Getting Started
+## Project Purpose
 
-First, run the development server:
+ArtHub is a modern online art marketplace that connects artists and art enthusiasts worldwide. Users can browse artworks, purchase original art pieces, leave comments on purchased artworks, and manage subscriptions. Artists can upload and manage artworks, while admins oversee the entire platform.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🌐 Live Site
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+https://arthub-client-kappa.vercel.app
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Key Features
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Authentication with Email/Password and Google Login
+- Role-based Dashboard (Buyer, Artist, Admin)
+- Browse and search artworks
+- Advanced filtering and sorting system
+- Artwork details page with purchase option
+- Stripe payment integration
+- Subscription system (Free, Pro, Premium)
+- Purchase history management
+- Comment system for purchased artworks
+- Wishlist functionality
+- Responsive UI for mobile, tablet, and desktop
+- Dark mode support
+- Interactive charts and analytics
+- Skeleton loaders and custom error pages
 
-## Learn More
+## Technologies Used
 
-To learn more about Next.js, take a look at the following resources:
+- Next.js 16
+- React.js
+- Tailwind CSS
+- HeroUI
+- Better Auth
+- Axios
+- Stripe
+- Recharts
+- React Hook Form
+- React Hot Toast
+- Framer Motion
+- Lucide React
+- Next Themes
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## NPM Packages Used
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+@heroui/react
+@stripe/stripe-js
+axios
+better-auth
+framer-motion
+lucide-react
+next-themes
+react-hot-toast
+recharts
+react-hook-form
 
-## Deploy on Vercel
+## Environment Variables
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Create a .env file and add:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+BETTER_AUTH_SECRET=
+
+BETTER_AUTH_URL=
+
+MONGODB_URI=
+
+NEXT_PUBLIC_SERVER_URL=
+
+NEXT_PUBLIC_BASE_URL=
+
+GOOGLE_CLIENTID=
+
+GOOGLE_SECRET=
+
+NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=
+
+STRIPE_SECRET_KEY=
+
+NEXT_PUBLIC_IMGBB_KEY=
+
+## Admin Credentials
+
+<!--
+Admin Email: admin@arthub.com
+Admin Password: Admin@123 -->
