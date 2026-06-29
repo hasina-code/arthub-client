@@ -80,6 +80,5 @@ NEXT_PUBLIC_IMGBB_KEY=
 
 ## Admin Credentials
 
-<!--
 Admin Email: admin@arthub.com
-Admin Password: Admin@123 -->
+Admin Password: Admin@123
