@@ -16,16 +16,27 @@ export default function PurchaseHistoryPage() {
   }, [session]);
 
   const fetchHistory = async () => {
-    try {
-      setLoading(true);
-      const res = await axios.get(`${process.env.NEXT_PUBLIC_SERVER_URL}/purchase-history/${session.user.email}`);
-      setHistory(res.data);
-    } catch (error) {
-      console.error(error);
-    } finally {
-      setLoading(false);
-    }
-  };
+  try {
+    setLoading(true);
+
+    const token = session?.session?.token;
+
+    const res = await axios.get(
+      `${process.env.NEXT_PUBLIC_SERVER_URL}/purchase-history/${session.user.email}`,
+      {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      }
+    );
+
+    setHistory(res.data);
+  } catch (error) {
+    console.log(error);
+  } finally {
+    setLoading(false);
+  }
+};
 
   if (loading || isPending) {
     return (

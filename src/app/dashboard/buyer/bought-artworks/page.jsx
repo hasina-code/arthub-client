@@ -24,25 +24,31 @@ export default function BoughtArtworksPage() {
     }
   }, [session]);
 
-  const fetchBoughtArtworks = async () => {
-    try {
-      setLoading(true);
+ const fetchBoughtArtworks = async () => {
+  try {
+    setLoading(true);
 
-      const res = await axios.get(
-        `${process.env.NEXT_PUBLIC_SERVER_URL}/purchase-history/${session.user.email}`
-      );
+    const token = session?.session?.token;
 
-      setArtworks(res.data);
-    } catch (err) {
-      console.error(err);
+    const res = await axios.get(
+      `${process.env.NEXT_PUBLIC_SERVER_URL}/purchase-history/${session.user.email}`,
+      {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      }
+    );
 
-      setError(
-        "Failed to load your artworks. Please try again later."
-      );
-    } finally {
-      setLoading(false);
-    }
-  };
+    setArtworks(res.data);
+  } catch (err) {
+    console.log(err);
+    setError(
+      "Failed to load your artworks. Please try again later."
+    );
+  } finally {
+    setLoading(false);
+  }
+};
 
   // Loading State
   if (isPending || loading) {

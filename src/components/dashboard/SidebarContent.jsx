@@ -13,9 +13,8 @@ export default function SidebarContent({ navItems, onNavigate }) {
 
       {/* LOGO */}
       <div className="mb-8 px-3">
-        <Link href="/" onClick={onNavigate} className="text-2xl font-bold">
-        
-          ArtHub
+        <Link href="/" onClick={onNavigate} >
+        <span className="text-4xl font-bold bg-gradient-to-r from-cyan-400 to-pink-400 bg-clip-text text-transparent">ArtHub</span>
         </Link>
       </div>
 

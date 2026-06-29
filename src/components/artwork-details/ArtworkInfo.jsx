@@ -34,43 +34,55 @@ export default function ArtworkInfo({
 
   const isAdmin =
     session?.user?.role === "admin";
+const handlePurchase = async () => {
+  if (!session) {
+    toast.error("Please login first");
+    router.push("/signin");
+    return;
+  }
 
-  const handlePurchase = async () => {
-    if (!session) {
-      toast.error("Please login first");
-      router.push("/signin");
-      return;
-    }
+  if (isAdmin) {
+    toast.error(
+      "Admin cannot purchase artworks"
+    );
+    return;
+  }
 
-    if (isAdmin) {
-      toast.error(
-        "Admin cannot purchase artworks"
-      );
-      return;
-    }
+  if (isOwner) {
+    toast.error(
+      "You cannot purchase your own artwork"
+    );
+    return;
+  }
 
-    if (isOwner) {
-      toast.error(
-        "You cannot purchase your own artwork"
-      );
-      return;
-    }
+  try {
+    const token =
+      session?.session?.token ||
+      session?.token;
 
-    try {
-      const res = await axios.post(
-        `${process.env.NEXT_PUBLIC_SERVER_URL}/create-checkout-session`,
-        {
-          artworkId: artwork._id,
-          buyerEmail: session.user.email,
-        }
-      );
+    const res = await axios.post(
+      `${process.env.NEXT_PUBLIC_SERVER_URL}/create-checkout-session`,
+      {
+        artworkId: artwork._id,
+        buyerEmail: session.user.email,
+      },
+      {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      }
+    );
 
-      window.location.href = res.data.url;
-    } catch (error) {
-      console.log(error);
-      toast.error("Payment failed");
-    }
-  };
+    window.location.href = res.data.url;
+  } catch (error) {
+    console.log(error.response?.data);
+
+    toast.error(
+      error.response?.data?.message ||
+        "Payment failed"
+    );
+  }
+};
 
   const handleDelete = async () => {
     try {

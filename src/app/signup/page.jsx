@@ -16,52 +16,78 @@ import {
 } from "@heroui/react";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
+import toast from "react-hot-toast";
 import { FcGoogle } from "react-icons/fc";
 
 export default function SignUpPage() {
   const router = useRouter();
   const [error, setError] = useState("");
 
-  const onSubmit = async (e) => {
-    e.preventDefault();
-    setError("");
+  const [loading, setLoading] = useState(false);
 
-    const formData = new FormData(e.currentTarget);
-    const user = Object.fromEntries(formData.entries());
+const onSubmit = async (e) => {
+  e.preventDefault();
+  setError("");
+  setLoading(true);
 
-    if (user.password !== user.confirmPassword) {
-      setError("Passwords do not match!");
+  const formData = new FormData(e.currentTarget);
+  const user = Object.fromEntries(formData.entries());
+
+  if (user.password !== user.confirmPassword) {
+    setError("Passwords do not match!");
+    toast.error("Passwords do not match!");
+    setLoading(false);
+    return;
+  }
+
+  try {
+    const result = await authClient.signUp.email({
+      name: user.name,
+      email: user.email,
+      password: user.password,
+      image: user.image,
+      role: user.role,
+      plan: "free",
+    });
+
+    if (result?.error) {
+      setError(result.error.message);
+      toast.error(result.error.message);
+      setLoading(false);
       return;
     }
 
-    try {
-      const result = await authClient.signUp.email({
-        name: user.name,
-        email: user.email,
-        password: user.password,
-        image: user.image,
-        role: user.role,
-        plan: "free",
-      });
+    toast.success("Account created successfully!");
 
-      if (result?.error) {
-        setError(result.error.message);
-        return;
-      }
-
+    setTimeout(() => {
       router.push("/");
-    } catch (err) {
-      setError("Something went wrong!");
-      console.error(err);
-    }
-  };
+    }, 1000);
+
+  } catch (err) {
+    setError("Something went wrong!");
+    toast.error("Something went wrong!");
+    console.error(err);
+  } finally {
+    setLoading(false);
+  }
+};
 
   const handleGoogleSignUp = async () => {
+  try {
+    toast.loading("Redirecting to Google...", {
+      id: "google-signup",
+    });
+
     await authClient.signIn.social({
       provider: "google",
       callbackURL: "/",
     });
-  };
+  } catch (error) {
+    toast.error("Google signup failed", {
+      id: "google-signup",
+    });
+  }
+};
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-slate-950 p-20">

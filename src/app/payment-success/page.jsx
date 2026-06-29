@@ -9,17 +9,12 @@ import { authClient } from "@/lib/auth-client";
 export default function PaymentSuccess() {
   const params = useSearchParams();
 
-  const { data: session } =
-    authClient.useSession();
+  const { data: session } = authClient.useSession();
 
-  const artworkId =
-    params.get("artworkId");
+  const artworkId = params.get("artworkId");
+  const buyer = params.get("buyer");
 
-  const buyer =
-    params.get("buyer");
-
-  const [showModal, setShowModal] =
-    useState(false);
+  const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
     if (
@@ -34,18 +29,20 @@ export default function PaymentSuccess() {
 
   const savePurchase = async () => {
     try {
+      const token = session?.session?.token;
+
       await axios.post(
         `${process.env.NEXT_PUBLIC_SERVER_URL}/purchase-success`,
         {
           artworkId,
-
           buyerEmail: buyer,
-
-          buyerName:
-            session.user.name,
-
-          transactionId:
-            crypto.randomUUID(),
+          buyerName: session.user.name,
+          transactionId: crypto.randomUUID(),
+        },
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
         }
       );
     } catch (error) {
@@ -57,9 +54,7 @@ export default function PaymentSuccess() {
     <div className="min-h-screen bg-[#050B23]">
       <PaymentSuccessModal
         isOpen={showModal}
-        onClose={() =>
-          setShowModal(false)
-        }
+        onClose={() => setShowModal(false)}
       />
     </div>
   );

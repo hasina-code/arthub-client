@@ -26,50 +26,53 @@ export default function ArtistDashboardHomePage() {
   }, [session]);
 
   const fetchOverview = async () => {
-    try {
-      const token =
-        session?.session?.token ||
-        session?.token;
+  try {
+    const token =
+      session?.session?.token ||
+      session?.token;
 
-      // artist artworks
-      const artworksRes = await axios.get(
-        `${process.env.NEXT_PUBLIC_SERVER_URL}/artist/artworks/${session.user.email}`,
-        {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        }
-      );
+    const artworksRes = await axios.get(
+      `${process.env.NEXT_PUBLIC_SERVER_URL}/artist/artworks/${session.user.email}`,
+      {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      }
+    );
 
-      // sales history
-      const salesRes = await axios.get(
-        `${process.env.NEXT_PUBLIC_SERVER_URL}/artist/sales/${session.user.email}`
-      );
+    const salesRes = await axios.get(
+      `${process.env.NEXT_PUBLIC_SERVER_URL}/artist/sales/${session.user.email}`,
+      {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      }
+    );
 
-      const artworks = artworksRes.data;
-      const sales = salesRes.data;
+    const artworks = artworksRes.data;
+    const sales = salesRes.data;
 
-      const soldArtworks = artworks.filter(
-        (art) => art.status === "sold"
-      ).length;
+    const soldArtworks = artworks.filter(
+      (art) => art.status === "sold"
+    ).length;
 
-      const totalRevenue = sales.reduce(
-        (sum, item) => sum + Number(item.amount),
-        0
-      );
+    const totalRevenue = sales.reduce(
+      (sum, item) => sum + Number(item.amount),
+      0
+    );
 
-      setStats({
-        totalArtworks: artworks.length,
-        soldArtworks,
-        totalSales: sales.length,
-        totalRevenue,
-      });
-    } catch (error) {
-      console.log(error);
-    } finally {
-      setLoading(false);
-    }
-  };
+    setStats({
+      totalArtworks: artworks.length,
+      soldArtworks,
+      totalSales: sales.length,
+      totalRevenue,
+    });
+  } catch (error) {
+    console.log(error);
+  } finally {
+    setLoading(false);
+  }
+};
 
   const chartData = [
     {

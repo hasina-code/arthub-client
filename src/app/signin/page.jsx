@@ -14,6 +14,7 @@ import {
 } from "@heroui/react";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
+import toast from "react-hot-toast";
 import { FcGoogle } from "react-icons/fc";
 
 export default function SignInPage() {
@@ -21,30 +22,43 @@ export default function SignInPage() {
   const [error, setError] = useState("");
 
   const onSubmit = async (e) => {
-    e.preventDefault();
+  e.preventDefault();
 
-    const formData = new FormData(e.currentTarget);
-    const user = Object.fromEntries(formData.entries());
+  const formData = new FormData(e.currentTarget);
+  const user = Object.fromEntries(formData.entries());
 
-    const { error } = await authClient.signIn.email({
-      email: user.email,
-      password: user.password,
-      callbackURL: "/",
-    });
+  const { error } = await authClient.signIn.email({
+    email: user.email,
+    password: user.password,
+    callbackURL: "/",
+  });
 
-    if (error) {
-      setError(error.message);
-    } else {
-      router.push("/");
-    }
-  };
+  if (error) {
+    setError(error.message);
+    toast.error(error.message);
+  } else {
+    toast.success("Successfully signed in");
+    router.push("/");
+  }
+};
 
   const handleGoogleSignIn = async () => {
+  try {
+    toast.loading("Redirecting to Google...", {
+      id: "google-login",
+    });
+
     await authClient.signIn.social({
       provider: "google",
       callbackURL: "/",
     });
-  };
+
+  } catch (error) {
+    toast.error("Google sign in failed", {
+      id: "google-login",
+    });
+  }
+};
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-black p-6">
